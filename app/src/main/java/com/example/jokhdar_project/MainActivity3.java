@@ -24,6 +24,8 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
 
+import io.github.muddz.styleabletoast.StyleableToast;
+
 public class MainActivity3 extends AppCompatActivity {
 
     ListView myListView;
@@ -86,6 +88,7 @@ public class MainActivity3 extends AppCompatActivity {
             public void onClick(View view) {
                 myDB.addStudent(id, name, surname, fname, natID, dob, gender);
                 startActivity(new Intent(MainActivity3.this, sqliList.class));
+                StyleableToast.makeText(MainActivity3.this, "Added to SQLite Database", R.style.success_toast).show();
             }
         });
         Button update = mDialogView.findViewById(R.id.updateUser);
