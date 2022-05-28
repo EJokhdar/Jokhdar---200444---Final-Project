@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--suppress ALL -->
+<resources>
+    <style name="success_toast">
+        <item name="stColorBackground">#94FFAB</item>
+        <item name="stTextColor">#000000</item>
+    </style>
+    <style name="delete_toast">
+        <item name="stColorBackground">#FF2828</item>
+        <item name="stTextColor">#000000</item>
+    </style>
+    <style name="update_toast">
+        <item name="stColorBackground">#D1C664</item>
+        <item name="stTextColor">#000000</item>
+        <item name="stIconStart">@drawable/updateicon</item>
+    </style>
+    <style name="name_toast">
+        <item name="stColorBackground">#2196F3</item>
+        <item name="stTextColor">#000000</item>
+    </style>
+</resources>

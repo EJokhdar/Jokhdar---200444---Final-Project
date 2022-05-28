@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Jokhdar - 200444</string>
+    <array name="genders">
+        <item>Male</item>
+        <item>Female</item>
+    </array>
+</resources>

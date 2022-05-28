@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1011912639450",
+    "firebase_url": "https://jokhdar---project-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "jokhdar---project",
+    "storage_bucket": "jokhdar---project.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1011912639450:android:d74484c06a2779a93776e3",
+        "android_client_info": {
+          "package_name": "com.example.jokhdar_project"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1011912639450-4ai479gloiabumjc96nv7ooipojrgjn6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBvUyo125Z5b7W9Ogyf0-CMv82fwERjr0o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1011912639450-4ai479gloiabumjc96nv7ooipojrgjn6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
