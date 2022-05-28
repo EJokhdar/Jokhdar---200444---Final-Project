@@ -12,6 +12,7 @@ import android.widget.Toast;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import es.dmoral.toasty.Toasty;
 import io.github.muddz.styleabletoast.StyleableToast;
 
 public class addToDB extends AppCompatActivity {
@@ -44,8 +45,8 @@ public class addToDB extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 insertStudentData();
-                //Toasty.success(addToDB.this, "Added to Firebase Database", Toast.LENGTH_SHORT, true).show();
-                StyleableToast.makeText(addToDB.this, "Added to Firebase Database", R.style.success_toast).show();
+                Toasty.success(addToDB.this, "Added to Firebase Database", Toast.LENGTH_SHORT, true).show();
+                //StyleableToast.makeText(addToDB.this, "Added to Firebase Database", R.style.success_toast).show();
             }
         });
 
@@ -61,8 +62,8 @@ public class addToDB extends AppCompatActivity {
                 String genderStr = gender.getSelectedItem().toString();
 
                 insertStudentDataSQL(idStr, nameStr, surnameStr, fnameStr, natIDStr, dobStr, genderStr);
-                //Toasty.success(addToDB.this, "Added to SQLite Database", Toast.LENGTH_SHORT, true).show();
-                StyleableToast.makeText(addToDB.this, "Added to SQLite Database", R.style.success_toast).show();
+                Toasty.success(addToDB.this, "Added to SQLite Database", Toast.LENGTH_SHORT, true).show();
+                //StyleableToast.makeText(addToDB.this, "Added to SQLite Database", R.style.success_toast).show();
             }
         });
     }

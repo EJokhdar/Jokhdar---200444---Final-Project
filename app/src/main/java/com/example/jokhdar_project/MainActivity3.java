@@ -14,6 +14,7 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -24,6 +25,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
 
+import es.dmoral.toasty.Toasty;
 import io.github.muddz.styleabletoast.StyleableToast;
 
 public class MainActivity3 extends AppCompatActivity {
@@ -88,7 +90,8 @@ public class MainActivity3 extends AppCompatActivity {
             public void onClick(View view) {
                 myDB.addStudent(id, name, surname, fname, natID, dob, gender);
                 startActivity(new Intent(MainActivity3.this, sqliList.class));
-                StyleableToast.makeText(MainActivity3.this, "Added to SQLite Database", R.style.success_toast).show();
+                Toasty.success(MainActivity3.this, "Added to SQLite Database", Toast.LENGTH_SHORT, true).show();
+                //StyleableToast.makeText(MainActivity3.this, "Added to SQLite Database", R.style.success_toast).show();
             }
         });
         Button update = mDialogView.findViewById(R.id.updateUser);

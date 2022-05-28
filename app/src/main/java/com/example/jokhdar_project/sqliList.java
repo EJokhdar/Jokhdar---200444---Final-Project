@@ -13,6 +13,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
+import es.dmoral.toasty.Toasty;
 import io.github.muddz.styleabletoast.StyleableToast;
 
 public class sqliList extends AppCompatActivity {
@@ -58,8 +59,8 @@ public class sqliList extends AppCompatActivity {
                 String name = arrayList.get(i).getName();
                 String surname = arrayList.get(i).getSurname();
 
-                //Toasty.info(sqliList.this, name+" "+surname, Toast.LENGTH_SHORT, true).show();
-                StyleableToast.makeText(sqliList.this, name+" "+surname, R.style.name_toast).show();
+                Toasty.info(sqliList.this, name+" "+surname, Toast.LENGTH_SHORT, true).show();
+                //StyleableToast.makeText(sqliList.this, name+" "+surname, R.style.name_toast).show();
             }
         });
     }

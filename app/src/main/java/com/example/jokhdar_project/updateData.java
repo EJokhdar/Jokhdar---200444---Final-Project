@@ -11,6 +11,7 @@ import android.widget.Spinner;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import es.dmoral.toasty.Toasty;
 import io.github.muddz.styleabletoast.StyleableToast;
 
 public class updateData extends AppCompatActivity {
@@ -44,8 +45,8 @@ public class updateData extends AppCompatActivity {
                 String newGender = updateGender.getSelectedItem().toString();
 
                 updateData(newStdID, newName, newSurname, newFName, newNatID, newDOB, newGender);
-                //Toasty.normal(updateData.this, "Updated "+newStdID+"'s data in Firebase Database", R.drawable.updateicon).show();
-                StyleableToast.makeText(updateData.this, "Updated "+newStdID+" in Firebase Database", R.style.update_toast).show();
+                Toasty.normal(updateData.this, "Updated "+newStdID+"'s data in Firebase Database", R.drawable.updateicon).show();
+                //StyleableToast.makeText(updateData.this, "Updated "+newStdID+" in Firebase Database", R.style.update_toast).show();
             }
         });
 
@@ -61,8 +62,8 @@ public class updateData extends AppCompatActivity {
                 String newGender = updateGender.getSelectedItem().toString();
 
                 updateDataSQL(newStdID, newName, newSurname, newFName, newNatID, newDOB, newGender);
-                //Toasty.normal(updateData.this, "Updated "+newStdID+"'s data in SQLite Database", R.drawable.updateicon).show();
-                StyleableToast.makeText(updateData.this, "Updated "+newStdID+" in SQLite Database", R.style.update_toast).show();
+                Toasty.normal(updateData.this, "Updated "+newStdID+"'s data in SQLite Database", R.drawable.updateicon).show();
+                //StyleableToast.makeText(updateData.this, "Updated "+newStdID+" in SQLite Database", R.style.update_toast).show();
             }
         });
     }

@@ -11,6 +11,7 @@ import android.widget.Toast;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import es.dmoral.toasty.Toasty;
 import io.github.muddz.styleabletoast.StyleableToast;
 
 public class deleteData extends AppCompatActivity {
@@ -34,8 +35,8 @@ public class deleteData extends AppCompatActivity {
 
                 String deletedStdID = deleteStdID.getText().toString();
                 deleteRecord(deletedStdID);
-                //Toasty.error(deleteData.this, "Deleted "+deletedStdID+" from Firebase Database", Toast.LENGTH_SHORT, true).show();
-                StyleableToast.makeText(deleteData.this, "Removed "+deletedStdID+" from Firebase Database", R.style.delete_toast).show();
+                Toasty.error(deleteData.this, "Deleted "+deletedStdID+" from Firebase Database", Toast.LENGTH_SHORT, true).show();
+                //StyleableToast.makeText(deleteData.this, "Removed "+deletedStdID+" from Firebase Database", R.style.delete_toast).show();
             }
         });
 
@@ -46,8 +47,8 @@ public class deleteData extends AppCompatActivity {
 
                 String deletedStdID = deleteStdID.getText().toString();
                 deleteRecordSQLI(deletedStdID);
-                //Toasty.error(deleteData.this, "Deleted "+deletedStdID+" from SQLite Database", Toast.LENGTH_SHORT, true).show();
-                StyleableToast.makeText(deleteData.this, "Removed "+deletedStdID+" from SQLite Database", R.style.delete_toast).show();
+                Toasty.error(deleteData.this, "Deleted "+deletedStdID+" from SQLite Database", Toast.LENGTH_SHORT, true).show();
+                //StyleableToast.makeText(deleteData.this, "Removed "+deletedStdID+" from SQLite Database", R.style.delete_toast).show();
             }
         });
     }
